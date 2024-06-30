@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="w-full h-full">
-      <APIProvider apiKey={''}>
+      <APIProvider apiKey={'AIzaSyBfeQU5phbNKNVPcHdYmf81i8cRu4De-Z4'}>
         <MyMap />
       </APIProvider>
     </div>
