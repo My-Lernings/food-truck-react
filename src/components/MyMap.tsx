@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Map, Marker, useMap, } from '@vis.gl/react-google-maps';
+import { Map, Marker, useMap } from '@vis.gl/react-google-maps';
 import axios from 'axios';
 import { FoodTruck } from '../models/truck.ts'
 import { Avatar, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 import { FoodTruckMenu } from '../models/menu.ts';
 import { motion } from 'framer-motion';
 import BasicTabs from './MenuView.tsx';
-import { marker } from '../assets/market.ts';
-var iconPin = {
-  path: 'M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z',
-  fillColor: '#64be67',
-  fillOpacity: 1,
-  scale: 0.05, //to reduce the size of icons
-};
+
 const MyMap = () => {
   const [bounds, setBounds] = useState<LatLngBoundsPayload | null>(null)
   const [currentPosition, setCurrentPosition] = useState<GeolocationPosition | null>(null)
